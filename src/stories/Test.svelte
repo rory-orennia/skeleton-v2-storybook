@@ -1,9 +1,9 @@
 <script lang="ts">
 </script>
 
-<button type="button" class="bg-green-500 btn-icon variant-filled">🎉</button>
-<button type="button" class="prose prose-lg btn variant-filled">Button</button>
-<button type="button" class="btn variant-filled">
+<button type="button" class="bg-green-500 btn-icon variant-outline">🎉</button>
+<button type="button" class="prose prose-lg btn variant-outline">Button</button>
+<button type="button" class="btn variant-outline">
 	<span>🎉</span>
 	<span>Button</span>
 </button>
