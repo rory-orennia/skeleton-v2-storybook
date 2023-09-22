@@ -1,8 +1,6 @@
-import type { Preview } from '@storybook/svelte';
+import type { Preview, SvelteRenderer } from '@storybook/svelte';
+import { withThemeByClassName } from '@storybook/addon-themes';
 
-import { withThemeByClassName } from '@storybook/addon-styling';
-
-/* TODO: update import to your tailwind styles file. If you're using Angular, inject this through your angular.json config instead */
 import '../src/app.postcss';
 
 const preview: Preview = {
@@ -11,17 +9,14 @@ const preview: Preview = {
 		controls: {
 			matchers: {
 				color: /(background|color)$/i,
-				date: /Date$/
+				date: /Date$/i
 			}
 		}
 	},
-
 	decorators: [
-		// Adds theme switching support.
-		// NOTE: requires setting "darkMode" to "class" in your tailwind config
-		withThemeByClassName({
+		withThemeByClassName<SvelteRenderer>({
 			themes: {
-				light: 'light',
+				light: '',
 				dark: 'dark'
 			},
 			defaultTheme: 'light'
